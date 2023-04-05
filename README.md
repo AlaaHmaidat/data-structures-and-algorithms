@@ -1,6 +1,6 @@
 # data-structures-and-algorithms
 
 | Title              | Link 
-| -----------        | -----------                                            |
-| array-reverse      | [reverse Array](./array-reverse/array_reverse.md)     |
-| array-insert-shift |                                                   |
+| -----------        | -----------                                                          |
+| reverse Array      | [reverse Array](./array-reverse/array_reverse.md)                    |
+| Insert Shift Array | [Insert Shift Array](./array-insert-shift/array-insert-shift.md)     |
