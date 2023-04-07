@@ -18,7 +18,8 @@ def insertShiftArray(list, value):
         list2.append(list[index+item])
 
     newList = list1+list2
-    return newList
+    return newList.
+
 '''
 
 
