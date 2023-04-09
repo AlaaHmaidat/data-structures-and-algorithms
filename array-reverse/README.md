@@ -17,8 +17,8 @@ loop in to list and reverse it
 whach 1 is the number of steps from tail to first to revers list
 3-return the revers array and print it
 
-Time complexity -->O(n)
-Space complexity -->O(1)
+Time complexity -->O(n) because in the worst-case scenario, it needs to revers all the elements in the list.
+Space complexity -->O(1) because it does not use any additional data structures.
 
 ## Solution
 
