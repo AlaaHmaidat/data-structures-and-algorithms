@@ -42,3 +42,4 @@ list = [42, 8, 15, 23, 42]
 value = 16
 print(insertShiftArray(list, value)) # Output: [42, 8, 15, 16, 23, 42]
 ```
+[CODE](./array-insert-shift.py)
