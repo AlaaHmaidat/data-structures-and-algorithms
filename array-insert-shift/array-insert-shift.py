@@ -1,3 +1,5 @@
+import math
+
 '''
 def insertShiftArray(list, value):
 
@@ -28,6 +30,8 @@ def insertShiftArray(list, value):
     lengthList = len(list)
     #ceil middel index
     midIndex = lengthList // 2 + (lengthList % 2)
+    # midIndex = math.ceil(lengthList / 2 )
+
     #number of index
     numderOfIndexs = lengthList - 1
     #add the value in list jest to extend the list

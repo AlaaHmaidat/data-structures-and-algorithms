@@ -1,5 +1,11 @@
 # Insert Shift Array
+Given an array contain from integer numbers and Given a number and put it on the middle of the array
 
+1-Inputs:
+list: a list of integers
+value: an integer to be inserted in the middle of the list
+2-Outputs:
+list: a modified list with the value parameter inserted at the middle index position
 ## Whiteboard Process
 ![WhiteboardWorkflow01](../img/whiteboard%20array-insert-shift.jpg)
 
