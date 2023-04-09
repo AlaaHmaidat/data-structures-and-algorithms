@@ -21,24 +21,18 @@ The time complexity of this function is O(n) because in the worst-case scenario,
 The space complexity of this function is O(1) because it does not use any additional data structures, and all modifications are done in-place in the input list.
 
 ## Solution
-```
+```python
 # Define the function
 def insertShiftArray(list, value):
-    #length of list
+
     lengthList = len(list)
-    #ceil middel index
     midIndex = lengthList // 2 + (lengthList % 2)
-    #number of index
     numderOfIndexs = lengthList - 1
-    #add the value in list jest to extend the list
     list.append(value)
-    #while loop for shift the value after middel index
     while numderOfIndexs >= midIndex:
         
         list[numderOfIndexs+1] = list[numderOfIndexs]
-        #to stop while loop in middel
         numderOfIndexs -= 1
-    #change the value in the middel    
     list[midIndex] = value
 
     return list

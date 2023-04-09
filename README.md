@@ -1,6 +1,6 @@
-# data-structures-and-algorithms
+# Data structures and algorithms
 
-| Title                     | Link 
-| -----------               | -----------                                                          |
-| README reverse Array      | [reverse Array](./array-reverse/array_reverse.md)                    |
-| README Insert Shift Array | [Insert Shift Array](./array-insert-shift/array-insert-shift.md)     |
+| Title               | Link 
+| -----------         | -----------                                  |
+|  reverse Array      | [README](./array-reverse/README.md)          |
+|  Insert Shift Array | [README](./array-insert-shift/README.md)     |
