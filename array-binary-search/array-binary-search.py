@@ -2,33 +2,23 @@ import math
 
 
 def BinarySearch(list, key):
-    lengthList = len(list)-1
+    last_index = len(list)-1
+    front=0
+    rear =last_index
 
-    midIndex = math.ceil(lengthList / 2)
-    # print(midIndex)
-    if key == list[midIndex]:
-        return list[midIndex]
-    elif key >= list[midIndex]:
-        for i in range(midIndex, lengthList):
-            midIndex = math.ceil((lengthList+midIndex)/2)
-            # print(midIndex)
-            if key == list[midIndex]:
-                return list[midIndex]
-            elif key >= list[midIndex]:
-                continue
-    elif key <= list[midIndex]:
-        for i in range(0, midIndex):
-            midIndex = math.ceil(midIndex/2)
-            # print(midIndex)
-            if key == list[midIndex]:
-                return list[midIndex]
-            elif key <= list[midIndex] and midIndex!=1:
-                continue
-            elif key <= list[midIndex] and midIndex==1:
-                return list[0]
+    while front <= rear:
+        midIndex = math.floor((front+rear) / 2)
+        if key == list[midIndex]:
+            return midIndex
+        elif key < list[midIndex]:
+            rear = midIndex-1
+        elif key > list[midIndex]:
+            front = midIndex+1
+
+    return -1
 
 
-list = [4, 8, 15, 16, 23, 42, 44, 45, 46]
-val = 16
+list = [4, 8, 15, 16, 23, 42, 50, 60, 80, 90, 100]
+key = 8
 
-print(BinarySearch(list, val))
+print(BinarySearch(list, key))
