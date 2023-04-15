@@ -56,6 +56,65 @@ class Linked_List:
                 temp = temp.next
             output += " NULL"
         return output
+    
+
+class Doubly_Linked_List:
+
+    def __init__(self):
+        self.head = None
+
+    def insert(self, value):
+        # for v in value:
+
+            # Create a new node with the given value
+            node = Node(value)
+
+            # Set the 'next' pointer of the new node to the current head of the list
+            node.next = self.head
+
+            if self.head is not None:
+                node.prev = node
+
+            # Update the 'head' pointer to point to the new node, making it the new head of the list
+            self.head = node
+
+            return f"insert {value} successfully"
+
+    # def includes(self, value):
+    #     values = []
+    #     temp = self.head
+
+    #     while temp:
+    #         values.append(temp.value)
+    #         temp = temp.next
+
+    #     for value in values:
+    #         return True
+    #     return False
+
+    def includes(self, value):
+        temp = self.head
+
+        while temp is not None:
+            if temp.value == value:
+                return True
+            temp = temp.next
+        return False
+    
+    def to_string(self):
+
+        output = " "
+
+        if self.head is None:
+            output = "Empty LinkedList"
+
+        else:
+            temp = self.head
+            while temp:
+                output += f'{{ {temp.value} }} <-> '
+                temp = temp.next
+            output += " NULL"
+        return output
 
 
     # delete the first matched node (key) in linkelist
