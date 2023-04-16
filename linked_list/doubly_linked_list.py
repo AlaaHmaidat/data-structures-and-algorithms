@@ -1,11 +1,3 @@
-'''
-head -->|A|next|-->|B|next|-->None
-
---insert in the first of linked list:
-head -->|C|next|-->|A|next|-->|B|next|-->None  
-'''
-
-
 class Node:
     """
     A Node object represents a single element in a linked list.
@@ -13,15 +5,16 @@ class Node:
     Args:
         value: The value stored in the node.
         next: A pointer to the next node in the sequence. Initially set to None.
+        prev: A pointer to the previous node in the sequence. Initially set to None.
     """
     def __init__(self, value):
         self.value = value
         self.next = None
+        self.prev = None
 
-
-class Linked_List:
+class Doubly_Linked_List:
     """
-    A Linked_List object represents a linked list data structure that stores a sequence of elements.
+    A Doubly_Linked_List object represents a linked list data structure that stores a sequence of elements.
 
     Attributes:
         head: A pointer to the first node in the linked list. Initially set to None.
@@ -32,29 +25,47 @@ class Linked_List:
         """
         self.head = None
 
-    def insert(self, value):   
+    def insert(self, value):
             """
-            Inserts a new node with the given value at the beginning of the linked list.
+            Inserts a new node with the given value at the beginning of the linked list, and updates the 'prev' and 'next'
+            pointers of adjacent nodes if they exist.
 
             Args:
-              value: The value to be inserted into the linked list.
+                value: The value to be inserted into the linked list.
 
             Returns:
                 A string indicating that the value has been successfully inserted.
+
             """
-        # for v in value: def insert(self, *value):
+        # for v in value:
 
             # Create a new node with the given value
             node = Node(value)
 
             # Set the 'next' pointer of the new node to the current head of the list
             # if (self.head is None):
+
             node.next = self.head
+
+            if self.head is not None:
+                node.prev = node
 
             # Update the 'head' pointer to point to the new node, making it the new head of the list
             self.head = node
 
             return f"insert {value} successfully"
+
+    # def includes(self, value):
+    #     values = []
+    #     temp = self.head
+
+    #     while temp:
+    #         values.append(temp.value)
+    #         temp = temp.next
+
+    #     for value in values:
+    #         return True
+    #     return False
 
     def includes(self, value):
         """
@@ -73,15 +84,15 @@ class Linked_List:
                 return True
             temp = temp.next
         return False
-
+    
     def __str__(self):
-        """
-        Returns a string representation of the linked list.
+        # """
+        # Returns a string representation of the linked list.
 
-        Returns:
-            A string that lists the values of each node in the linked list, separated by '->' symbols.
-            If the linked list is empty, returns the string 'Empty LinkedList'.
-        """
+        # Returns:
+        #     A string that lists the values of each node in the linked list, separated by '->' symbols.
+        #     If the linked list is empty, returns the string 'Empty LinkedList'.
+        # """
         output = " "
 
         if self.head is None:
@@ -90,41 +101,7 @@ class Linked_List:
         else:
             temp = self.head
             while temp:
-                output += f'{{ {temp.value } }} -> '
+                output += f'{{ {temp.value} }} <-> '
                 temp = temp.next
             output += " NULL"
         return output
-
-
-    # delete the first matched node (key) in linkelist
-
-    def delete_node(self, key):
-
-        temp = self.head
-
-        # 1. Empty linked list
-        if (temp is None):
-            return False
-
-        # 2. If the target is the first node
-        if (temp is not None):
-            if (temp.value == key):
-                self.head = temp.next
-                temp = None
-                return
-
-        # search for the key and delete the target node
-        while (temp is not None):
-            if temp.value == key:
-                break
-            prev = temp
-            temp = temp.next
-
-        # 3. The key does not Exists
-        if (temp is None):
-            return False
-
-        # unlinke the target node from the linkedlist
-        prev.next = temp.next
-        temp = None
-        return True
