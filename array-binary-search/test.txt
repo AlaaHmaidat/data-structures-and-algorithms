@@ -1,0 +1,62 @@
+import math
+
+
+def first_half(list, key, midIndex):
+    for i in range(0, midIndex):  # low = 0 and midIndex = higth
+        midIndex = math.ceil(midIndex/2)  # this is new midIndex
+        if key == list[midIndex]:
+            return midIndex
+        # [4,((8)), 15, 16, 23, 42] if midIndex != 1
+        elif key < list[midIndex] and midIndex != 1:
+            continue
+        # [4,((8)), 15, 16, 23, 42] if midIndex == 1
+        elif key < list[midIndex] and midIndex == 1:
+            if key == list[0]:
+                return 0 
+            else:
+                return  - 1       
+        elif key > list[midIndex] and key < list[midIndex+2]:
+             if key == list[midIndex+1]:
+                return midIndex + 1
+             else:
+                return  - 1
+
+
+
+def sec_half(list, key, midIndex, higth):
+    for i in range(midIndex, higth):
+        midIndex = math.ceil((higth+midIndex)/2)
+        if key == list[midIndex]:
+            return midIndex
+        elif key > list[midIndex]:
+            continue
+        elif key < list[midIndex] and key > list[midIndex-2]:
+            if key == list[midIndex-1]:
+                return midIndex - 1
+            else:
+                return  - 1
+
+
+        
+
+
+def BinarySearch(list, key):
+    higth = len(list)-1
+
+    midIndex = math.floor(higth / 2)
+    if key == list[midIndex]:
+        return midIndex
+
+    elif key < list[midIndex]:
+        res1 = first_half(list, key, midIndex)
+        return res1
+    elif key > list[midIndex]:
+        res = sec_half(list, key, midIndex, higth)
+        return res
+
+
+list = [4, 8, 15, 16, 23, 42,50,60,80,90,100]
+
+val = 15
+
+print(BinarySearch(list, val))
