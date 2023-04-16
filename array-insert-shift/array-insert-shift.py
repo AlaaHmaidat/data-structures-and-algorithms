@@ -31,7 +31,7 @@ def insertShiftArray(list, value):
     lengthList = len(list)
     #ceil middel index
     midIndex = lengthList // 2 + (lengthList % 2)
-    # midIndex = math.ceil(lengthList / 2 )
+    # midIndex = math.ceil(lengthList / 2  )
 
     #number of index
     numderOfIndexs = lengthList - 1
