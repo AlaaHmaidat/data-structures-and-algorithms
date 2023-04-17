@@ -2,30 +2,53 @@
 head -->|A|next|-->|B|next|-->None
 
 --insert in the first of linked list:
-head -->|C|next|-->|A|next|-->|B|next|-->None
-   
+head -->|C|next|-->|A|next|-->|B|next|-->None  
 '''
 
 
 class Node:
+    """
+    A Node object represents a single element in a linked list.
+
+    Args:
+        value: The value stored in the node.
+        next: A pointer to the next node in the sequence. Initially set to None.
+    """
     def __init__(self, value):
         self.value = value
         self.next = None
-        self.prev = None
 
 
 class Linked_List:
+    """
+    A Linked_List object represents a linked list data structure that stores a sequence of elements.
 
+    Attributes:
+        head: A pointer to the first node in the linked list. Initially set to None.
+    """
     def __init__(self):
+        """
+        Initializes an empty linked list with a None value for head.
+        """
         self.head = None
 
-    def insert(self, value):
+    def insert(self, value):   
+            """
+            Inserts a new node with the given value at the beginning of the linked list.
+
+            Args:
+              value: The value to be inserted into the linked list.
+
+            Returns:
+                A string indicating that the value has been successfully inserted.
+            """
         # for v in value: def insert(self, *value):
 
             # Create a new node with the given value
             node = Node(value)
 
             # Set the 'next' pointer of the new node to the current head of the list
+            # if (self.head is None):
             node.next = self.head
 
             # Update the 'head' pointer to point to the new node, making it the new head of the list
@@ -34,6 +57,15 @@ class Linked_List:
             return f"insert {value} successfully"
 
     def includes(self, value):
+        """
+        Searches the linked list for a node with the given value.       
+        
+        Args:
+            value: The value to be searched in linked list.
+
+        Returns:
+            A boolean value indicating whether or not the value was found in the linked list.
+        """
         temp = self.head
 
         while temp is not None:
@@ -43,7 +75,13 @@ class Linked_List:
         return False
 
     def __str__(self):
+        """
+        Returns a string representation of the linked list.
 
+        Returns:
+            A string that lists the values of each node in the linked list, separated by '->' symbols.
+            If the linked list is empty, returns the string 'Empty LinkedList'.
+        """
         output = " "
 
         if self.head is None:
