@@ -1,5 +1,8 @@
 # Linked List Kth
+k-th value from the end of a linked list.
 
+input : a number
+output : Node’s value
 ## Whiteboard Process
 ![WhiteboardWorkflow01](../img/Whiteboard%20Linked%20List%20Kth.jpg)
 
