@@ -68,7 +68,7 @@ class Linked_List_Kth:
         count = length-1  # Index of last node
 
         while (current):
-            if (k < 0 or k > length):
+            if (k < 0 or k >= length ):
                 return "Exception"
             elif (count == k):
                 return current.value
