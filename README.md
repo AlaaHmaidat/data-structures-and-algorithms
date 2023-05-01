@@ -7,4 +7,5 @@
 |  Array Binary Search           | [README](./array-binary-search/README.md)    |
 |  Linked List                   | [README](./linked_list/README.md)            |
 |  Linked List Insertions        | [README](./linked_list_insertions/README.md) |
-|  Linked List Kth               | [README](./linked_list_kth/README.md) |
+|  Linked List Kth               | [README](./linked_list_kth/README.md)        |
+|  linked list zip               | [README](./linked-list-zip/README.md)        |
