@@ -12,6 +12,7 @@ class Node:
         self.value = value
         self.next = None
 
+
 class Linked_List_Kth:
     """
     A Linked_List_Kth object represents a node value in linked list using index.
@@ -68,11 +69,12 @@ class Linked_List_Kth:
         count = length-1  # Index of last node
 
         while (current):
-            if k < 0: 
+            if k < 0:
                 raise Exception("Sorry, no numbers below zero")
                 # return "Sorry, no numbers below zero"
             elif k >= length:
-                raise Exception("Sorry, no numbers above length of linked list")
+                raise Exception(
+                    "Sorry, no numbers above length of linked list")
                 # return "Sorry, no numbers above length of linked list"
             elif (count == k):
                 return current.value
@@ -89,4 +91,4 @@ if __name__ == '__main__':
     ll.append(8)  # index: 1
     ll.append(2)  # index: 0
 
-    print(ll.kthFromEnd(6))
+    print(ll.kthFromEnd(0))
