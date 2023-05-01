@@ -12,7 +12,8 @@ class Node:
         self.value = value
         self.next = None
 
-class Linked_List_Kth:
+
+class Linked_List_Zip:
     """
     A Linked_List_Kth object represents a node value in linked list using index.
 
@@ -47,7 +48,7 @@ class Linked_List_Kth:
             temp.next = node
         return f"insert {new_value} successfully"
 
-    def kthFromEnd(self, k):
+    def zip_lists(self, list1, list2):
         """
         Searches in the linked list for a node with the given index.       
 
@@ -57,36 +58,41 @@ class Linked_List_Kth:
         Returns:
             A value of node was found in the linked list using index.
         """
-        temp = self.head
+        temp1 = list1.head
+        temp2 = list2.head
+
         length = 0
 
-        while (temp):
-            length += 1  # Calculate the length of the linked list
-            temp = temp.next
+        print(temp1)
 
-        current = self.head  # Initialise temp
-        count = length-1  # Index of last node
+        # while (temp):
+        #     length += 1  # Calculate the length of the linked list
+        #     temp = temp.next
 
-        while (current):
-            if k < 0: 
-                raise Exception("Sorry, no numbers below zero")
-                # return "Sorry, no numbers below zero"
-            elif k >= length:
-                raise Exception("Sorry, no numbers above length of linked list")
-                # return "Sorry, no numbers above length of linked list"
-            elif (count == k):
-                return current.value
-            elif (count > k):
-                count -= 1
-                current = current.next
-                continue
+        # current = self.head  # Initialise temp
+        # count = length-1  # Index of last node
+
+        # while (current):
+        #     if (k < 0 or k >= length):
+        #         return "Exception"
+        #     elif (count == k):
+        #         return current.value
+        #     elif (count > k):
+        #         count -= 1
+        #         current = current.next
+        #         continue
 
 
 if __name__ == '__main__':
-    ll = Linked_List_Kth()
-    ll.append(1)  # index: 3
-    ll.append(3)  # index: 2
-    ll.append(8)  # index: 1
-    ll.append(2)  # index: 0
 
-    print(ll.kthFromEnd(6))
+    list1 = Linked_List_Zip()
+    list1.append(1)
+    list1.append(3)
+    list1.append(2)
+
+    list2 = Linked_List_Zip()
+    list2.append(5)
+    list2.append(9)
+    list2.append(4)
+
+    print(list1.zip_lists(list2))
