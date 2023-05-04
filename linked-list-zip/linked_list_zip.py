@@ -48,39 +48,54 @@ class Linked_List_Zip:
             temp.next = node
         return f"insert {new_value} successfully"
 
-    def zip_lists(self, list1, list2):
+    def __str__(self):
         """
-        Searches in the linked list for a node with the given index.       
-
-        Args:
-            k: The index to searched in linked list.
+        Returns a string representation of the linked list.
 
         Returns:
-            A value of node was found in the linked list using index.
+            A string that lists the values of each node in the linked list, separated by '->' symbols.
+            If the linked list is empty, returns the string 'Empty LinkedList'.
         """
-        temp1 = list1.head
-        temp2 = list2.head
+        output = " "
 
-        length = 0
+        if self.head is None:
+            output = "Empty LinkedList"
 
-        print(temp1)
+        else:
+            temp = self.head
+            while temp:
+                output += f'{{ {temp.value } }} -> '
+                temp = temp.next
+            output += " NULL"
+        return output
 
-        # while (temp):
-        #     length += 1  # Calculate the length of the linked list
-        #     temp = temp.next
 
-        # current = self.head  # Initialise temp
-        # count = length-1  # Index of last node
+def zip_lists(head1, head2):
+    """
+    Searches in the linked list for a node with the given index.       
 
-        # while (current):
-        #     if (k < 0 or k >= length):
-        #         return "Exception"
-        #     elif (count == k):
-        #         return current.value
-        #     elif (count > k):
-        #         count -= 1
-        #         current = current.next
-        #         continue
+    Args:
+        k: The index to searched in linked list.
+
+    Returns:
+        A value of node was found in the linked list using index.
+    """
+
+    # List1 is empty then return List2
+    if head1 is None:
+        print(head2)
+
+    if head2 is None:
+        print(head1)
+
+    temp1 = head1
+    temp1.next = head2
+
+    temp2 = head2
+    # temp2.next = head1
+    # temp2 = head2
+    # temp2.next =head1
+    # print(head2)
 
 
 if __name__ == '__main__':
@@ -95,4 +110,10 @@ if __name__ == '__main__':
     list2.append(9)
     list2.append(4)
 
-    print(list1.zip_lists(list2))
+    list3 = Linked_List_Zip()
+
+    list3.head = zip_lists(list1.head, list2.head)
+
+    print("list1= ", list1.__str__())
+    print("list2= ", list2.__str__())
+    print("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL")
