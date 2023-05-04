@@ -8,4 +8,5 @@
 |  Linked List                   | [README](./linked_list/README.md)            |
 |  Linked List Insertions        | [README](./linked_list_insertions/README.md) |
 |  Linked List Kth               | [README](./linked_list_kth/README.md)        |
-|  linked list zip               | [README](./linked-list-zip/README.md)        |
+|  Linked List Zip               | [README](./linked-list-zip/README.md)        |
+|  Stack And Queue               | [README](./stack_and_queue/README.md)        |
