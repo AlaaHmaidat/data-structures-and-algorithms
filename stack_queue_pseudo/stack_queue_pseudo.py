@@ -71,4 +71,8 @@ if __name__ == '__main__':
     queue.enqueue(2)
     queue.enqueue(3)
 
-    print(queue.dequeue())  # 1
+    print(queue.dequeue()) # 1
+    queue.enqueue(4)
+    print(queue.dequeue()) # 2
+    print(queue.dequeue()) # 3
+    print(queue.dequeue()) # 4
