@@ -72,31 +72,44 @@ class Linked_List_Zip:
 
 def zip_lists(head1, head2):
     """
-    Searches in the linked list for a node with the given index.       
+    Takes two linked lists and zips them together, alternating nodes between the two lists.
 
     Args:
-        k: The index to searched in linked list.
+        head1: The head of the first linked list.
+        head2: The head of the second linked list.
 
     Returns:
-        A value of node was found in the linked list using index.
+        The head of the new linked list that results from zipping the two input linked lists.
     """
-
-    # List1 is empty then return List2
     if head1 is None:
-        print(head2)
+        return head2
 
     if head2 is None:
-        print(head1)
+        return head1
 
-    temp1 = head1
-    temp1.next = head2
+    current1 = head1
+    current2 = head2
+    result_head = Node(None)
+    result_tail = result_head
 
-    temp2 = head2
-    # temp2.next = head1
-    # temp2 = head2
-    # temp2.next =head1
-    # print(head2)
+    while current1 and current2:
+        temp1 = current1.next
+        temp2 = current2.next
 
+        result_tail.next = Node(current1.value)
+        result_tail = result_tail.next
+        result_tail.next = Node(current2.value)
+        result_tail = result_tail.next
+
+        current1 = temp1
+        current2 = temp2
+
+    if current1:
+        result_tail.next = current1
+    else:
+        result_tail.next = current2
+
+    return result_head.next
 
 if __name__ == '__main__':
 
@@ -116,4 +129,4 @@ if __name__ == '__main__':
 
     print("list1= ", list1.__str__())
     print("list2= ", list2.__str__())
-    print("{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL")
+    print("list3= " ,list3.__str__())
