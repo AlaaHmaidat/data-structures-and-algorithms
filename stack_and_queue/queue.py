@@ -8,6 +8,11 @@ class queue:
         self.rear = None
 
     def enqueue(self,value): 
+        '''
+        add to the queue
+        Arguments: value
+        adds a new node with that value to the back of the queue with an O(1) Time performance.
+        '''
         new_node = Node(value)
         if self.front == None:
             self.front = new_node
@@ -19,6 +24,13 @@ class queue:
         return "successfully push onto a queue"
 
     def dequeue(self):
+        '''
+        delete from queue
+        Arguments: none
+        Returns: the value from node from the front of the queue
+        Removes the node from the front of the queue
+        Should raise exception when called on empty queue
+        '''
         if self.front == None:
             # raise Exception(
             #         "Sorry, This queue is empty")
@@ -31,9 +43,15 @@ class queue:
         self.front = self.front.next # Change the pointer for front to be point in the node after the front
         temp.next = None
 
-        return f"successfully dequeue {temp.value} from the stack"
+        return f"successfully dequeue {temp.value} from the queue"
         
     def peek(self):
+        '''
+        peek from the queue
+        Arguments: none
+        Returns: Value of the node located at the front of the queue
+        Should raise exception when called on empty stack
+        '''
         if self.front:
             return self.front.value
         else:
@@ -41,6 +59,11 @@ class queue:
                     "Sorry, This queue is empty")
         
     def is_empty(self):
+        '''
+        check if queue is empty
+        Arguments: none
+        Returns: Boolean indicating whether or not the queue is empty
+        '''
         if self.front == None and self.rear == None:
             
             return "This queue is empty"

@@ -9,6 +9,11 @@ class stack:
         self.size = 0
 
     def push(self, value):
+        '''
+        add in to stack
+        Arguments: value
+        adds a new node with that value to the top of the stack with an O(1) Time performance.
+        '''
         new_node = Node(value)
 
         if self.top:
@@ -21,7 +26,13 @@ class stack:
         return f"successfully push {num_of_items} item onto a stack"
 
     def pop(self):
-        
+        '''
+        delete from the stack
+        Arguments: none
+        Returns: the value from node from the top of the stack
+        Removes the node from the top of the stack
+        Should raise exception when called on empty stack
+        '''
         if self.top:
             temp = self.top
             self.top = self.top.next
@@ -31,6 +42,12 @@ class stack:
         return ("Sorry, This stack is empty")
     
     def peek(self):
+        '''
+        peek from the stack
+        Arguments: none
+        Returns: Value of the node located at the top of the stack
+        Should raise exception when called on empty stack
+        '''
         if self.top:
             return self.top.value
         else:
@@ -39,11 +56,17 @@ class stack:
             return ("Sorry, This stack is empty")
     
     def get_size(self):
+        '''
+        git the size of the stack
+        '''
         return self.size
     
     def is_empty(self):
+        '''
+        is the stack empty 
+        Arguments: none
+        Returns: Boolean indicating whether or not the stack is empty.
+        '''
         if self.size == 0:
             return "This stack is empty"
         return "This stack is not empty"
-        
-    
