@@ -10,4 +10,5 @@
 |  Linked List Kth               | [README](./linked_list_kth/README.md)        |
 |  Linked List Zip               | [README](./linked-list-zip/README.md)        |
 |  Stack And Queue               | [README](./stack_and_queue/README.md)        |
-|  Stack Queue Pseudo               | [README](./stack_queue_pseudo/README.md) |
+|  Stack Queue Pseudo            | [README](./stack_queue_pseudo/README.md)     |
+|  Stack Queue Brackets          | [README](./stack_queue_brackets/README.md)   |
