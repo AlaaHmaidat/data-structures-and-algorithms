@@ -63,7 +63,7 @@ def test_can_successfully_instantiate_an_empty_stack(stack_list):
 
 def test_calling_pop_or_peek_on_empty_stack_raises_exception(stack_list):
 
-    actual = stack_list.pop() or stack_list.peek()
+    actual = stack_list.pop() and stack_list.peek()
     expected = "Sorry, This stack is empty"
     assert actual == expected
 
@@ -92,7 +92,7 @@ def test_can_successfully_dequeue_out_of_a_queue_the_expected_value(queue_list):
     items_pop = queue_list.dequeue()
 
     actual = items_pop
-    expected = f"successfully dequeue 1 from the stack"
+    expected = f"successfully dequeue 1 from the queue"
     assert actual == expected
 
 
