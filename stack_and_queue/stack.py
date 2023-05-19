@@ -70,3 +70,5 @@ class stack:
         if self.size == 0:
             return "This stack is empty"
         return "This stack is not empty"
+stack1=stack()    
+print(stack1.push(1))
