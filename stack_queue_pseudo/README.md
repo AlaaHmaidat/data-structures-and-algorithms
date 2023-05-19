@@ -2,7 +2,7 @@
 Implement Queue using Stacks
 
 ## Whiteboard Process
-![WhiteboardWorkflow01](../img/Stack%20Queue%20Pseudo.jpg)
+![WhiteboardWorkflow01](../img/Stack%20Queue%20Pseudo2.jpg)
 
 ## Approach & Efficiency
 ### Approach
