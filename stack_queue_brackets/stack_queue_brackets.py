@@ -141,9 +141,10 @@ def validate_brackets(str):  # {} # }{
             queue_Round.enqueue('}')  # )
             countC2 +=1
     if countR1 == countR2 and countS1 == countS2 and countC1 == countC2 :
-        print(True)
-    else:
-        print(False)
+        top = stack_Round.pop()
+        if stack_Round.index(top) != queue_Round.index(i):
+                return False
+    return len(stack_Round) == 0
         
 
 
@@ -161,4 +162,4 @@ def validate_brackets(str):  # {} # }{
 
 if __name__ == '__main__':
 
-    validate_brackets('(()[(]))')
+    validate_brackets('(({})[(]))')
