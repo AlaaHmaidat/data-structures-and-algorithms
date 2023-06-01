@@ -28,4 +28,4 @@ In summary, the approach recursively traverses the binary tree and compares the 
 The time complexity for both the find_maximum() method and the _find_maximum() helper method is O(N), where N is the number of nodes in the binary tree. The space complexity is O(H), where H is the height of the binary tree.
 ## Solution
 
-Click [here](./tree-max.py)
+Click [here](./tree_max.py)
