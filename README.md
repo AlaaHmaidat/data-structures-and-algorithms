@@ -13,5 +13,7 @@
 |  Stack Queue Pseudo            | [README](./stack_queue_pseudo/README.md)         |
 |  Stack Queue Animal Shelter    | [README](./stack_queue_animal_shelter/README.md) |
 |  Stack Queue Brackets          | [README](./stack_queue_brackets/README.md)       |
-|  Tree max                      | [README](./tree_max/README.md)                   |
+|  Tree max                      | [README](./tree-max/README.md)                   |
 |  Trees                         | [README](./trees/README.md)                      |
+|  Breadth-first Traversal       | [README](./tree_breadth_first/README.md)         |
+
