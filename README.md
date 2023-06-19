@@ -18,3 +18,4 @@
 |  Breadth-first Traversal       | [README](./tree_breadth_first/README.md)         |
 |  Trace Pseudocode              | [README](./sorting/insertion/README.md)          |
 |  Trace Pseudocode merge        | [README](./sorting/insertion/merge/README.md)    |
+|  Comparisons                   | [README](./Comparisons/README.md)    |
