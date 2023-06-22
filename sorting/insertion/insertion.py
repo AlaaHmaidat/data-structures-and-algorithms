@@ -29,6 +29,8 @@ def insertion_sort(input_list):
         list: The sorted list.
 
     """
+    if len(input_list) == 0:
+        return 'The list is empty'
     sorted_list = []
     sorted_list.append(input_list[0])
 
@@ -37,4 +39,4 @@ def insertion_sort(input_list):
     return sorted_list
 
 
-print(insertion_sort([8, 4, 23, 42, 16, 15]))
+print(insertion_sort([8,4,23,42,16,15]))
