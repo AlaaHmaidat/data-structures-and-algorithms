@@ -16,5 +16,5 @@
 |  Tree max                      | [README](./tree-max/README.md)                   |
 |  Trees                         | [README](./trees/README.md)                      |
 |  Breadth-first Traversal       | [README](./tree_breadth_first/README.md)         |
-|  Trace Pseudocode              | [README](./sorting/insertion/README.md)          |
+|  Trace Pseudocode Insertion Sort | [README](./sorting/insertion/README.md)        |
 |  Trace Pseudocode merge        | [README](./sorting/insertion/merge/README.md)    |
