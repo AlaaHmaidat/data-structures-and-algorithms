@@ -1,27 +1,16 @@
-# Insertion Sort
+# Sorting comparisons
 
 ## Feature Tasks
 
-write functions which sort domain objects
+Write functions that sort domain objects
 
 ## Approach & Efficiency
 
-Time complexity : O(n log n) 
-
-Space complexity : O(1)
+The time complexity of the code is O(n log n) for the sorting operations,
+and the space complexity is O(n) due to the creation of sorted lists and storing movie objects.
 
 ## Solution
 
-### [Link to code (sorting Comparisons) ](./../sortingComparisons/sortingComparisons/sortingComparisons.py)
+### Click [here](./Comparisons.py) to see the code
 
-### [Link to test code (sorting Comparisons) ](./../sortingComparisons/tests/test_sortingComparisons.py)
-
-
-### to run this code :
-    python3 -m venv .venv
-    source .venv/bin/activate
-    pip install -r requirements.txt
-    pytest
-
-    //after finishing 
-    deactivate
+### Click [here](./test_Comparisons.py) to see the test
