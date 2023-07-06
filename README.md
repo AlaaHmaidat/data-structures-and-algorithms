@@ -59,4 +59,5 @@ deactivate
 |  Trace Pseudocode Insertion Sort | [README](./sorting/insertion/README.md)        |
 |  Trace Pseudocode merge        | [README](./sorting/merge/README.md)              |
 |  Hash Table                    | [README](./Hash%20Table/README.md)               |
-|  hashmap-repeated-word         | [README](./hashmap-repeated-word/README.md)      |
+|  Hashmap repeated word         | [README](./hashmap-repeated-word/README.md)      |
+|  Tree intersection             | [README](./tree-intersection/README.md)          |
