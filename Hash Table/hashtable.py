@@ -66,7 +66,6 @@ class Hashtable():
 
         self.ckeys.append(key)
 
-
     def get(self, key):
         '''
         Arguments: key
@@ -74,15 +73,18 @@ class Hashtable():
         '''
         index = self.hash(key)
         
+        llist = self.arr[index]  # The linked list at this index
 
-        llist= self.arr[index] # The llist in this index
+        if llist is None:  # If the linked list is empty
+            return None
+
         temp = llist.head
         while temp:
-            if temp.data[0]== key:
+            if temp.data[0] == key:
                 return temp.data[1]
             temp = temp.next 
-            
-        return 'This key does not exist' 
+        
+        return None
 
     def has(self, key):
         '''
