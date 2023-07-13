@@ -30,7 +30,7 @@ Time Complexity:
 - Finding the first repeated word: O(n), where n is the number of words in the input string.
 - Finding the most common words: O(n), where n is the number of words in the input string.
 - Overall, the time complexity is O(n).
-
+...
 Space Complexity:
 
 - `dic1` dictionary: O(m), where m is the number of unique words in the input string.
