@@ -22,7 +22,7 @@ Function called repeated word that finds the first word to occur more than once 
    - If a word is already in `dic2`, it is the first repeated word.
    - If not, add the word to `dic2`.
 10. Return the list of all words and their frequencies (`dic1.items()`), the first repeated word, and the most common words.
-
+...
 
 Time Complexity:
 
