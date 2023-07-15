@@ -110,5 +110,5 @@ if __name__ == '__main__':
 
     neighbors = graph.get_neighbors(a)
 
-    print(graph.get_vertices)
+    print(graph)
     print('neighbors', neighbors)
