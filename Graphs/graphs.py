@@ -7,7 +7,7 @@ class Node:
 
 
 class Edge:
-    def __init__(self,vertex, weight):
+    def __init__(self, vertex, weight):
         self.vertex = vertex
         self.weight = weight
 
@@ -42,8 +42,6 @@ class Graphs:
         edge2 = Edge(vertex1, weight)
         self.dict_list[vertex2].append(edge2)
 
-
-
     def get_vertices(self):
         '''Arguments: none
         Returns all of the vertices in the graph as a collection (set, list, or similar)
@@ -57,11 +55,8 @@ class Graphs:
             collection.append(i)
 
         return collection
-        
 
-        
-
-    def get_neighbors(self,vertex):
+    def get_neighbors(self, vertex):
         '''Arguments: vertex
         Returns a collection of edges connected to the given vertex
         Include the weight of the connection in the returned collection
@@ -69,41 +64,37 @@ class Graphs:
 
         if vertex not in self.dict_list:
             return 'There are no vertices'
-    
+
         length = len(self.dict_list[vertex])
         collection = []
         for i in range(length):
             neighbor = self.dict_list[vertex][i].vertex.value
             weight = self.dict_list[vertex][i].weight
 
-            collection.append((neighbor,weight))
+            collection.append((neighbor, weight))
 
         return collection
 
-       
     def size(self):
         '''Arguments: none
         Returns the total number of vertices in the graph
         0 if there are none'''
 
         return len(self.dict_list)
-    
 
     def __str__(self):
-        output=''
+        output = ''
         for vertex in self.dict_list.keys():
             output += f'{vertex}: '
             for edge in self.dict_list[vertex]:
-                output +=f'{edge.vertex} --> '
-                
+                output += f'{edge.vertex} --> '
 
             output += '\n'
 
         return output
 
 
-
-if __name__=='__main__':
+if __name__ == '__main__':
     graph = Graphs()
 
     a = graph.add_vertex("A")
@@ -111,19 +102,13 @@ if __name__=='__main__':
     c = graph.add_vertex("C")
     d = graph.add_vertex("D")
 
-    graph.add_edge(a,b)
-    graph.add_edge(a,c)
-    graph.add_edge(c,b)
-    graph.add_edge(d,b)
-    graph.add_edge(d,c)
+    graph.add_edge(a, b)
+    graph.add_edge(a, c)
+    graph.add_edge(c, b)
+    graph.add_edge(d, b)
+    graph.add_edge(d, c)
 
-    neighbors=graph.get_neighbors(a)
-    
-    
+    neighbors = graph.get_neighbors(a)
 
-    print(graph)
-    print('neighbors',neighbors)
-
-
-
-
+    print(graph.get_vertices)
+    print('neighbors', neighbors)
