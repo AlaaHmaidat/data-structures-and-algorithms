@@ -60,5 +60,6 @@ deactivate
 |  Trace Pseudocode merge        | [README](./sorting/merge/README.md)              |
 |  Hash Table                    | [README](./Hash%20Table/README.md)               |
 |  hashmap left join             | [README](./hashmap-left-join/README.md)          |
+|  Graphs                        | [README](./Graphs/README.md)                     |
 |  Hashmap repeated word         | [README](./hashmap-repeated-word/README.md)      |
 |  Tree intersection             | [README](./tree-intersection/README.md)          |
