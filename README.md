@@ -64,3 +64,4 @@ deactivate
 |  Graph breadth first           | [README](./graph_breadth_first/README.md)        |
 |  Hashmap repeated word         | [README](./hashmap-repeated-word/README.md)      |
 |  Tree intersection             | [README](./tree-intersection/README.md)          |
+|  Graph business trip            | [README](./graph_business_trip/README.md)       |
